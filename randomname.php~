@@ -39,6 +39,8 @@ class randomname{
 
     	function workProgress($language, $words, $adjectives, $sayi){
         	$sizeOfDir = $sayi;
+        	$maxTimeSeconds = 10;
+        	$startTime = microtime(true);
         	for(;;){
             		$randWords = rand(0, sizeof($words) - 1);
             		$randAdjectives = rand(0, sizeof($adjectives) - 1);
