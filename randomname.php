@@ -37,6 +37,20 @@ class randomname{
         	return true;
     	}
 
+    	function workProgress($language, $words, $adjectives, $sayi){
+        	$sizeOfDir = $sayi;
+        	$maxTimeSeconds = 10;
+        	$startTime = microtime(true);
+        	for(;;){
+            		$randWords = rand(0, sizeof($words) - 1);
+            		$randAdjectives = rand(0, sizeof($adjectives) - 1);
+           		$dirName = $this->compress($words[$randWords], $adjectives[$randAdjectives]);
+            		if($this->createDirectory($language, $dirName)){
+                		$sizeOfDir -= 1;
+           		}	
+        	}
+    	}
+
 
 
 }
