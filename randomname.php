@@ -32,10 +32,7 @@ class randomname{
        	 	if(is_dir('dirs/' . $language . "/" . $dirName))
            		return false;
         	mkdir('dirs/' . $language . "/" . $dirName);
-        	echo $this->colorClass->getColoredString('Oluşturulan Dizin : ', "cyan");
-       	 	echo $this->colorClass->getColoredString( $this->decodeSlug($dirName), null, "cyan") . "\n";
-        	echo $this->colorClass->getColoredString( ' Slug : ', "red", "black");
-        	echo $this->colorClass->getColoredString( $dirName, null, "cyan") . "\n\n";
+        	echo "Oluşturulan Dizin : ".$dirname."\n\n";
 
         	return true;
     	}
