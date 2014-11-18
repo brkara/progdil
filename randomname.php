@@ -89,5 +89,21 @@ class rastgele_ad{
         elseif(in_array($arg0, array('tr', 'turkish', 'turkce'), true)){
             $this->uretici('tr', $this->turWords, $this->turAdj, $arg1);
         }
+		elseif(in_array($arg0, array('clear', 'temizle', 'sil'), true)){
+            if(is_dir('dirs')){
+                try{
+                    $this->dizin_sil('dirs');
+                    echo "Bütün Dizinler Silindi" . "\n";
+                }catch(Exception $e){
+                    echo "İzin hatası. Dizinler silinemedi" . "\n";
+                }
+            }
+            else{
+                echo "Silinecek Dizin Bulunamadı" . "\n";
+			}
+		}
+		else{
+            echo "Lütfen 'en' , 'english', 'ingilizce', 'tr', 'turkish', 'turkce' kelimelerini ve bir sayı değerini argüman olarak veriniz arguman veriniz" . "\n";
+        }
 	}
 }
