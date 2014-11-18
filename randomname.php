@@ -1,6 +1,6 @@
 <?php
 
-class randomname{
+class rastgele_ad{
 	protected $engWords;
    	protected $engAdj;
 
