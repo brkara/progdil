@@ -12,11 +12,11 @@ class rastgele_ad{
 	public function __construct($argv){
         $this->argv = $argv;
 
-        $this->turWords = array('ev', 'araba', 'elma', 'karpuz', 'iş', 'para');
-       	$this->turAdj = array('çok', 'büyük', 'tatlı', 'sarı', 'zengin', 'zevkli');
+        $this->turWords = array('ev', 'araba', 'elma', 'karpuz', 'iş', 'para', 'bilgisayar', 'kitap', 'hayat', 'saat', 'adam');
+       	$this->turAdj = array('çok', 'büyük', 'tatlı', 'sarı', 'zengin', 'zevkli', 'geniş', 'karanlık', 'muhteşem', 'zayıf');
 
-        $this->engWords = array('home', 'car', 'apple', 'computer', 'biycle', 'phone');
-        $this->engAdj = array('heavy', 'yellow', 'expensive', 'big', 'red');
+        $this->engWords = array('home', 'car', 'apple', 'computer', 'biycle', 'phone', 'life', 'chair', 'door', 'cloud', 'glass');
+        $this->engAdj = array('heavy', 'yellow', 'expensive', 'big', 'red', 'amazing', 'quickly', 'thin', 'lazy');
 
         $this->calis();
     }
