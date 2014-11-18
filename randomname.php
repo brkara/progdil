@@ -12,11 +12,11 @@ class rastgele_ad{
 	public function __construct($argv){
         $this->argv = $argv;
 
-        $this->turWords = array('ev', 'araba', 'elma', 'karpuz', 'iş', 'para');
-       	$this->turAdj = array('çok', 'büyük', 'tatlı', 'sarı', 'zengin', 'zevkli');
+        $this->turWords = array('ev', 'araba', 'elma', 'karpuz', 'iş', 'para', 'bilgisayar', 'kitap', 'hayat', 'saat', 'adam');
+       	$this->turAdj = array('çok', 'büyük', 'tatlı', 'sarı', 'zengin', 'zevkli', 'geniş', 'karanlık', 'muhteşem', 'zayıf');
 
-        $this->engWords = array('home', 'car', 'apple', 'computer', 'biycle', 'phone');
-        $this->engAdj = array('heavy', 'yellow', 'expensive', 'big', 'red');
+        $this->engWords = array('home', 'car', 'apple', 'computer', 'biycle', 'phone', 'life', 'chair', 'door', 'cloud', 'glass');
+        $this->engAdj = array('heavy', 'yellow', 'expensive', 'big', 'red', 'amazing', 'quickly', 'thin', 'lazy');
 
         $this->calis();
     }
@@ -88,6 +88,22 @@ class rastgele_ad{
         }
         elseif(in_array($arg0, array('tr', 'turkish', 'turkce'), true)){
             $this->uretici('tr', $this->turWords, $this->turAdj, $arg1);
+        }
+		elseif(in_array($arg0, array('clear', 'temizle', 'sil'), true)){
+            if(is_dir('dirs')){
+                try{
+                    $this->dizin_sil('dirs');
+                    echo "Bütün Dizinler Silindi" . "\n";
+                }catch(Exception $e){
+                    echo "İzin hatası. Dizinler silinemedi" . "\n";
+                }
+            }
+            else{
+                echo "Silinecek Dizin Bulunamadı" . "\n";
+			}
+		}
+		else{
+            echo "Lütfen 'en' , 'english', 'ingilizce', 'tr', 'turkish', 'turkce' kelimelerini ve bir sayı değerini argüman olarak veriniz arguman veriniz" . "\n";
         }
 	}
 }
