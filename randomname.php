@@ -1,22 +1,27 @@
 <?php
 
+/*Burak KARA
+*Değişken adlarını kontrol et değiştir bence
+*Ayrıca direk çalışır hale getir fonsiyon olarak
+* bir kaç kelime de ben ekleyim
+*/
+
 class rastgele_ad{
 	protected $engWords;
    	protected $engAdj;
 
     protected $turWords;
     protected $turAdj;
-    protected $colorClass;
     protected $argv;
 	
 	public function __construct($argv){
         $this->argv = $argv;
 
-        $this->turWords = array('ev', 'araba', 'elma', 'karpuz', 'iş', 'para', 'bilgisayar', 'kitap', 'hayat', 'saat', 'adam');
-       	$this->turAdj = array('çok', 'büyük', 'tatlı', 'sarı', 'zengin', 'zevkli', 'geniş', 'karanlık', 'muhteşem', 'zayıf');
+        $this->turWords = array('ev', 'araba', 'elma', 'karpuz', 'iş', 'para', 'bilgisayar', 'kitap', 'hayat', 'saat', 'adam', 'bina', 'otobüs', 'uçak');
+       	$this->turAdj = array('çok', 'büyük', 'tatlı', 'sarı', 'zengin', 'zevkli', 'geniş', 'karanlık', 'muhteşem', 'zayıf', 'kalın', 'ince');
 
-        $this->engWords = array('home', 'car', 'apple', 'computer', 'biycle', 'phone', 'life', 'chair', 'door', 'cloud', 'glass');
-        $this->engAdj = array('heavy', 'yellow', 'expensive', 'big', 'red', 'amazing', 'quickly', 'thin', 'lazy');
+        $this->engWords = array('home', 'car', 'apple', 'computer', 'biycle', 'phone', 'life', 'chair', 'door', 'cloud', 'glass', 'plane', 'earth', 'snow');
+        $this->engAdj = array('heavy', 'yellow', 'expensive', 'big', 'red', 'amazing', 'quickly', 'thin', 'lazy', 'great', 'white');
 
         $this->calis();
     }
